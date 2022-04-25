@@ -18,5 +18,7 @@ public interface StudentService extends JpaRepository<StudentDetails, Long>{
 			value="select * from student_details where name = :name",
 			nativeQuery = true)
 	List<StudentDetails> getAllStudents(@Param("name") String name);
+	
+	StudentDetails findByName(String name);
 
 }

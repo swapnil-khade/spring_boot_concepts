@@ -77,6 +77,12 @@ public class StudentController {
 	public List<StudentDetails> getAllSt(@PathVariable String name){
 		return studentService.getAllStudents(name);
 	}
+	
+	@GetMapping("/student/{name}")																// using custom method name
+	public StudentDetails getStudentByName(@PathVariable String name){
+		return studentService.findByName(name);
+	}
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<Object> getByID(@PathVariable Long id){
 		
