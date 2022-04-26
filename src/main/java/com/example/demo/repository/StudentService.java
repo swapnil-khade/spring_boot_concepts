@@ -19,6 +19,6 @@ public interface StudentService extends JpaRepository<StudentDetails, Long>{
 			nativeQuery = true)
 	List<StudentDetails> getAllStudents(@Param("name") String name);
 	
-	StudentDetails findByName(String name);
+	StudentDetails findByName(String name);												// custom method name 
 
 }
