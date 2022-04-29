@@ -5,12 +5,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.sun.istack.NotNull;
+
 @Entity
 @Table(name = "student_details")
 public class StudentDetails {
 	@Id
 	@GeneratedValue
 	Long id;
+	@NotNull
 	String name;
 	String courseName;
 	String feeStatus;

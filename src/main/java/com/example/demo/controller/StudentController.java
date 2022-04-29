@@ -85,7 +85,7 @@ public class StudentController {
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Object> getByID(@PathVariable Long id){
-		
+				
 		Optional<StudentDetails> result = studentService.findById(id);
 		if(result.isPresent())
 			return new ResponseEntity<Object>(result.get(), HttpStatus.OK);
